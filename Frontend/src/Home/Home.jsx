@@ -1,9 +1,23 @@
 // import React from "react";
 import { FaChartBar, FaChartLine, FaFileAlt, FaSearch } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 // import NavBar from "./NavBar";
 import Footer from "./Footer";
-
 function Home() {
+  const sentence = "Buy famous crypto coins easily";
+  const [displayedText, setDisplayedText] = useState("");
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (index < sentence.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText((prev) => prev + sentence[index]);
+        setIndex((prev) => prev + 1);
+      }, 150);
+      return () => clearTimeout(timeout);
+    }
+  }, [index, sentence]);
   const features = [
     {
       title: "Economic Indicators",
@@ -72,6 +86,7 @@ function Home() {
             </div>
           ))}
         </div>
+       
         <Footer />
       </div>
     </>
