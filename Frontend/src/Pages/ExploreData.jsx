@@ -76,7 +76,7 @@ function ExploreData() {
           {categories.map((item, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-md flex justify-between items-center hover:shadow-lg transition"
+              className="bg-gradient-to-tl from-blue-200 to-emerald-300 p-16 rounded-lg shadow-md flex justify-between items-center hover:shadow-lg transition"
             >
               <div className="flex items-center space-x-4">
                 <div className="text-3xl text-blue-500">{item.icon}</div>

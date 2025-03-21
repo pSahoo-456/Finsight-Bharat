@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 // import NavBar from "./NavBar";
 import Footer from "./Footer";
+import EconomicIndicator from "../Pages/EconomicIndicator";
+import { NavLink } from "react-router-dom";
 function Home() {
   const sentence = "Buy famous crypto coins easily";
   const [displayedText, setDisplayedText] = useState("");
@@ -18,27 +20,32 @@ function Home() {
       return () => clearTimeout(timeout);
     }
   }, [index, sentence]);
+
   const features = [
     {
       title: "Economic Indicators",
+      link: "/economicIndicator",
       description:
         "Explore GDP growth trends, inflation patterns, budget allocations, and forex reserves with interactive visualizations.",
       icon: <FaChartBar className="text-blue-600 text-2xl" />,
     },
     {
       title: "Market Intelligence",
+      link: "/marketIntelegence",
       description:
         "Analyze stock market correlations, sector growth rates, investment flows, and interest rate impacts.",
       icon: <FaChartLine className="text-blue-600 text-2xl" />,
     },
     {
       title: "Report Generation",
+      link: "/marketIntelegence",
       description:
         "Generate comprehensive economic outlooks, sector summaries, budget impact assessments, and customized reports.",
       icon: <FaFileAlt className="text-blue-600 text-2xl" />,
     },
     {
       title: "Data Exploration",
+      link: "/exploreData",
       description:
         "Search, filter, and analyze raw financial data with natural language queries and interactive visualizations.",
       icon: <FaSearch className="text-blue-600 text-2xl" />,
@@ -76,17 +83,91 @@ function Home() {
                   {feature.title}
                 </h2>
                 <p className="text-black mt-2">{feature.description}</p>
-                <a
-                  href="#"
-                  className="text-blue-600 font-medium mt-4 inline-block"
+                <NavLink
+                  to={`${feature.link}`}
+                  className=" font-medium text-black mt-4 inline-block"
                 >
                   Explore →
-                </a>
+                </NavLink>
               </div>
             </div>
           ))}
         </div>
-       
+        <section className="bg-gradient-to-b from-gray-100 to-white py-20">
+          <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            {/* Image Section */}
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src="./coin.png" // Replace with the image path
+                alt="Crypto Coins"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Text Section */}
+            <div>
+              <h1 className="text-4xl font-bold leading-tight">
+                The World’s 1st ICO <br />
+                Platform That Offers <br />
+                <span className="text-blue-500">Rewards</span>
+              </h1>
+              <p className="text-gray-600 mt-6 leading-relaxed">
+                Lorem Ipsum has been the industry's standard dummy text ever
+                since the 1500s, when an unknown printer took a galley of type
+                and scrambled.
+              </p>
+
+              {/* Buttons */}
+              <div className="mt-8 flex items-center space-x-4">
+                <button className="bg-blue-500 text-white px-6 py-3 rounded-xl shadow-md hover:bg-blue-600 transition">
+                  PURCHASE TOKENS
+                </button>
+
+                <button className="flex items-center text-blue-500 hover:text-blue-600">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 mr-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14.752 11.168l-5.197-2.598a1 1 0 00-1.455.894v5.072a1 1 0 001.455.894l5.197-2.598a1 1 0 000-1.788z"
+                    />
+                  </svg>
+                  How it work
+                </button>
+              </div>
+
+              {/* Floating Box */}
+              <div className="mt-12 bg-white shadow-lg rounded-xl p-4 w-64 flex items-center space-x-4">
+                <div className="p-3 bg-blue-100 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-blue-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M11 11V7m0 8v-4m2 2a2 2 0 11-4 0 2 2 0 014 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-sm font-bold">Access analytical</p>
+                  <p className="text-sm text-gray-600">market & price data</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <Footer />
       </div>
     </>

@@ -14,6 +14,7 @@ import MainPage from "./Home/MainPage.jsx";
 import MarketIntelegence from "./Pages/MarketIntelegence.jsx";
 import Reports from "./Pages/Reports.jsx";
  import ExploreData from "./Pages/ExploreData.jsx";
+import EconomicIndicator from "./Pages/EconomicIndicator.jsx";
 // import { useProductStore } from './contentStore/productStore.js';
 
 function App() {
@@ -44,6 +45,8 @@ function App() {
           <Route path="reports" element={<Reports />} />
           <Route path="exploreData" element={<ExploreData />} />
         </Route>
+        <Route path="/economicIndicator" element={<EconomicIndicator/>} />
+        <Route path="/marketIntelegence" element={<MarketIntelegence/>} />
 
         <Route
           path="/signup"
