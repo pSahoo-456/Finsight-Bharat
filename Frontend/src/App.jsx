@@ -18,7 +18,7 @@ import ReportGeneration from "./Pages/ReportGeneration.jsx";
 import EconomicIndicator from "./Pages/EconomicIndicator.jsx";
 import LandingPage from "./LandingPage/LandingPage.jsx";
 // import { useProductStore } from './contentStore/productStore.js';
-import ReportGeneration from "./Pages/ReportGeneration.jsx";
+// import ReportGeneration from "./Pages/ReportGeneration.jsx";
 
 function App() {
   const { user, isChekingAuth, authCheck } = useAuthStore();
@@ -52,10 +52,9 @@ function App() {
         <Route path="/economicIndicator" element={<EconomicIndicator/>} />
         <Route path="/marketIntelegence" element={<MarketIntelegence/>} />
         <Route path="/reportgeneration" element={<ReportGeneration/>} />
-<<<<<<< HEAD
 
-=======
->>>>>>> 6a96852d2a022318466866d34ae28d6118bd717b
+
+
         <Route
           path="/signup"
           element={!user ? <Signup /> : <Navigate to={"/"} />}
