@@ -16,38 +16,39 @@ function NavBar() {
         </div>
         <div className="flex space-x-6 text-gray-700 font-medium ml-80 text-lg">
           <NavLink
-            to="/home"
+            to="/mainpage/home"
             className=" font-bold transition-all duration-500  hover:scale-110 hover:text-blue-600"
           >
             Home
           </NavLink>
           <NavLink
-            to="/dashboard"
+            to="/mainpage/dashboard"
             className="font-bold transition-all duration-500 hover:text-blue-600  hover:scale-110"
           >
             Dashboard
           </NavLink>
           <NavLink
-            to="/marketIntelegence"
+            to="/mainpage/marketIntelegence"
             className="font-bold transition-all duration-500 hover:text-blue-600  hover:scale-110"
           >
             Market Intelligence
           </NavLink>
           <NavLink
-            to="/reports"
+            to="/mainpage/reports"
             className="font-bold transition-all duration-500 hover:text-blue-600  hover:scale-110"
           >
             Reports
           </NavLink>
           <NavLink
-            to="/exploreData"
+            to="/mainpage/exploreData"
             className="font-bold transition-all duration-500 hover:text-blue-600 hover:scale-110"
           >
             Explore Data
           </NavLink>
         </div>
         <div className="flex items-center space-x-4">
-          <NavLink to="/landingpage"
+          <NavLink
+          to='/'
             // onClick={handleSignOut}
             className=" bg-blue-600 p-2 rounded-2xl hover:bg-blue-800 "
           >

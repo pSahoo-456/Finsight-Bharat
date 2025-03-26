@@ -46,7 +46,7 @@ function Signup() {
             <div className="flex items-center border rounded-lg px-3 py-2 bg-gray-100">
               <FaEnvelope className="text-gray-400" />
               <input
-                type="email"
+                type="text"
                 name="email"
                 placeholder="Email Address"
                 value={email}

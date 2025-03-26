@@ -12,9 +12,10 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log('us-->',user)
-    login({email,password})
+    navigate('/home')
+  //   login({email,password})
     
-  if(user)navigate('/home')
+  // if(user)navigate('/home')
   };
 
   return (

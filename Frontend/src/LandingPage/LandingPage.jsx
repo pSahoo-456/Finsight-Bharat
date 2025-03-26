@@ -28,7 +28,7 @@ function LandingPage() {
         <div className="text-3xl font-bold ">FinSight <span className="text-blue-400">Bharat</span></div>
         <div className="flex space-x-4">
           <NavLink
-            to="/home"
+            to="/mainpage"
             className="bg-blue-500 hover:bg-blue-600 rounded-2xl px-4 py-2"
           >
             Register
@@ -58,7 +58,7 @@ function LandingPage() {
             </motion.h1>
             <div className="mt-8">
               <NavLink
-                to="/home"
+                to="/mainpage"
                 className="bg-blue-500 hover:bg-blue-600 rounded-2xl px-6 py-3 font-bold text-lg"
               >
                 Dive In
