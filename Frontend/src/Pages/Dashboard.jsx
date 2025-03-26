@@ -3,7 +3,6 @@ import ReportGeneration from './ReportGeneration'
 function Dashboard() {
   return (
     <>
-      <div>Dashboard</div>
 <ReportGeneration/>
     </>
   )

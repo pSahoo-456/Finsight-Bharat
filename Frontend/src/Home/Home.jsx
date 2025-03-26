@@ -107,14 +107,12 @@ function Home() {
             {/* Text Section */}
             <div>
               <h1 className="text-4xl font-bold leading-tight">
-                The World’s 1st ICO <br />
+              A trade reserve is not just a safety <br />
                 Platform That Offers <br />
                 <span className="text-blue-500">Rewards</span>
               </h1>
               <p className="text-gray-600 mt-6 leading-relaxed">
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled.
+              A trade reserve is not just a safety net—it’s the foundation of resilience, enabling businesses to weather volatility, seize unexpected opportunities, and build sustainable growth." 🌍📈
               </p>
 
               {/* Buttons */}

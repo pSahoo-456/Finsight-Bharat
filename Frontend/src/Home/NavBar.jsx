@@ -47,12 +47,12 @@ function NavBar() {
           </NavLink>
         </div>
         <div className="flex items-center space-x-4">
-          <button
-            onClick={handleSignOut}
+          <NavLink to="/landingpage"
+            // onClick={handleSignOut}
             className=" bg-blue-600 p-2 rounded-2xl hover:bg-blue-800 "
           >
             Signout
-          </button>
+          </NavLink>
         </div>
       </nav>
     </>

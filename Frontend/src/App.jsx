@@ -15,6 +15,7 @@ import MarketIntelegence from "./Pages/MarketIntelegence.jsx";
 import Reports from "./Pages/Reports.jsx";
  import ExploreData from "./Pages/ExploreData.jsx";
 import EconomicIndicator from "./Pages/EconomicIndicator.jsx";
+import LandingPage from "./LandingPage/LandingPage.jsx";
 // import { useProductStore } from './contentStore/productStore.js';
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/landingpage" element={<LandingPage/>} />
         <Route path="/" element={<MainPage />}>
           <Route index element={<Home />} />
           <Route path="home" element={<Home/>}/>

@@ -6,14 +6,21 @@ import { useAuthStore } from '../contentStore/authStore';
 
 function MainPage() {
   const { user } = useAuthStore();
-  return !user ? (
-    <LandingPage/>
-  ) : (
-   <>
-      {/* Navv */}
-      <NavBar/>
-      <Outlet/>
-    </>
+  // return !user ? (
+  //   <LandingPage/>
+  // ) : (
+  //  <>
+  //     {/* Navv */}
+  //     <NavBar/>
+  //     <Outlet/>
+  //   </>
+  // )
+  return(
+    <>
+       {/* Navv */}
+       <NavBar/>
+       <Outlet/>
+     </>
   )
 }
 
