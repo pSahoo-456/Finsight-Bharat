@@ -38,14 +38,14 @@ function Home() {
     },
     {
       title: "Report Generation",
-      link: "/marketIntelegence",
+      link: "/reportgeneration",
       description:
         "Generate comprehensive economic outlooks, sector summaries, budget impact assessments, and customized reports.",
       icon: <FaFileAlt className="text-blue-600 text-2xl" />,
     },
     {
       title: "Data Exploration",
-      link: "/exploreData",
+      link: "/mainpage/exploreData",
       description:
         "Search, filter, and analyze raw financial data with natural language queries and interactive visualizations.",
       icon: <FaSearch className="text-blue-600 text-2xl" />,

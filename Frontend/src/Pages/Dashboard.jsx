@@ -1,9 +1,9 @@
 import React from 'react'
-import ReportGeneration from './ReportGeneration'
+// import ReportGeneration from './ReportGeneration'
 function Dashboard() {
   return (
     <>
-<ReportGeneration/>
+        <div>Dashboard</div>
     </>
   )
 }
