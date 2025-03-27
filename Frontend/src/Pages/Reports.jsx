@@ -13,7 +13,7 @@ function Reports() {
   ];
   
   return (
-    <div className="min-h-screen bg-gradient-to-r from-green-500 to-blue-900 p-10">
+    <div className="min-h-screen bg-gradient-to-r from-gray-800 to-blue-900 p-10">
       <div className="container mx-auto bg-gradient-to-r from-purple-500 to-blue-500 shadow-lg rounded-xl p-8"> 
         
         {/* Header */}

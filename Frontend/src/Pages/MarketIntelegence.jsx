@@ -37,7 +37,7 @@ function MarketIntelegence() {
   }, []);
 
   return (
-    <div className="bg-gradient-to-r from-blue-500 to-purple-700 min-h-screen text-white p-6">
+    <div className="bg-gradient-to-r  from-gray-800 to-blue-900 min-h-screen text-white p-6">
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Header */}
         <div className="flex justify-between items-center border-b pb-4">
