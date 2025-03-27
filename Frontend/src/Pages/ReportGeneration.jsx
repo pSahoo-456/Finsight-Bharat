@@ -1,71 +1,75 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-// import { Button } from "lucide-react";
 
 const ReportGeneration = () => {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [date, setDate] = useState("");
-  const [report, setReport] = useState(null);
-
+  const [startYear, setStartYear] = useState("");
+  const [endYear, setEndYear] = useState("");
+  const [department, setDepartment] = useState("");
+  
   const generateReport = () => {
-    const newReport = {
-      title,
-      description,
-      date,
-    };
-    setReport(newReport);
+    console.log("Generating Report for:", { startYear, endYear, department });
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="max-w-4xl mx-auto"
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-600 to-blue-900 p-6">
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md"
       >
-        <div className="p-6 bg-white shadow-md rounded-2xl">
-          <h1 className="text-2xl font-bold mb-4">Report Generation</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input
-              className="border p-2 rounded-md w-full"
-              placeholder="Report Title"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-            />
-            <input
-              type="date"
-              className="border p-2 rounded-md w-full"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Enter Report Details</h2>
+        
+        <div className="space-y-4">
+          <div>
+            <label className="block text-gray-600 font-semibold">From Year:</label>
+            <motion.input 
+              whileFocus={{ scale: 1.05 }}
+              type="text" 
+              placeholder="Enter start year" 
+              className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400"
+              value={startYear} 
+              onChange={(e) => setStartYear(e.target.value)}
             />
           </div>
-          <textarea
-            className="border p-2 rounded-md w-full mt-4"
-            placeholder="Description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          />
-          <button onClick={generateReport} className="mt-4 w-full bg-blue-500 text-white p-2 rounded-md">
-            Generate Report
-          </button>
-        </div>
+          
+          <div>
+            <label className="block text-gray-600 font-semibold">To Year:</label>
+            <motion.input 
+              whileFocus={{ scale: 1.05 }}
+              type="text" 
+              placeholder="Enter end year" 
+              className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400"
+              value={endYear} 
+              onChange={(e) => setEndYear(e.target.value)}
+            />
+          </div>
 
-        {report && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="mt-8"
-          >
-            <div className="p-6 bg-white shadow-lg rounded-2xl">
-              <h2 className="text-xl font-semibold">{report.title}</h2>
-              <p className="text-gray-600">{report.date}</p>
-              <p className="mt-4">{report.description}</p>
-            </div>
-          </motion.div>
-        )}
+          <div>
+            <label className="block text-gray-600 font-semibold">Select Department:</label>
+            <motion.select 
+              whileFocus={{ scale: 1.05 }}
+              className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400"
+              value={department} 
+              onChange={(e) => setDepartment(e.target.value)}
+            >
+              <option value="">Select a department</option>
+              <option value="HR">HR</option>
+              <option value="Finance">Finance</option>
+              <option value="IT">IT</option>
+              <option value="Marketing">Marketing</option>
+            </motion.select>
+          </div>
+        </div>
+        
+        <motion.button 
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={generateReport} 
+          className="mt-6 w-full bg-blue-500 text-white p-2 rounded-md font-semibold text-lg shadow-md hover:bg-blue-600 transition"
+        >
+          Generate Report
+        </motion.button>
       </motion.div>
     </div>
   );
