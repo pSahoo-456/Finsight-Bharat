@@ -112,11 +112,7 @@ function Home() {
             transition={{ duration: 1 }}
             className="rounded-2xl overflow-hidden shadow-lg"
           >
-            <img
-              src="./finance-01.jpg"
-              alt="Finance"
-              className="w-full h-full object-cover"
-            />
+            <img src="/finance-01.jpg" alt="Finance" className="w-full h-full object-cover" />
           </motion.div>
 
           {/* Text Section */}

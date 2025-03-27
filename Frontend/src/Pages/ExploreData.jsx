@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaArrowRight, FaSearch } from 'react-icons/fa';
-import { BarChart3, LineChart, Wallet, TrendingUp, Banknote, Scale, Globe } from 'lucide-react';
+import { BarChart3, LineChart, Wallet, TrendingUp, Banknote, Scale, Globe, Briefcase } from 'lucide-react';
 
 const categories = [
   { title: 'GDP Growth', description: 'GDP growth rates and sector contributions', icon: <BarChart3 /> },
@@ -10,6 +10,7 @@ const categories = [
   { title: 'Trade Balance', description: 'Import/export data and trade balances', icon: <Scale /> },
   { title: 'Interest Rates', description: 'RBI repo rates and banking rates', icon: <Banknote /> },
   { title: 'Forex Reserves', description: 'Foreign exchange reserve trends', icon: <Globe /> },
+  { title: 'Investment Trends', description: 'FDI, FII, and capital flow trends', icon: <Briefcase /> }, 
 ];
 
 const exampleQueries = [
@@ -17,7 +18,7 @@ const exampleQueries = [
   'Compare agricultural vs manufacturing growth',
   'Inflation breakdown by categories',
   'Show budget allocation trends',
-  'FDI inflows by country',
+  '....'
 ];
 
 function ExploreData() {
@@ -59,7 +60,7 @@ function ExploreData() {
           {categories.map((item, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-blue-200 to-emerald-300 p-6 rounded-lg shadow-lg flex justify-between items-center hover:shadow-2xl transition-transform transform hover:scale-105"
+              className="bg-gradient-to-br from-blue-300 to-emerald-400 p-6 rounded-lg shadow-lg flex justify-between items-center hover:shadow-2xl transition-transform transform hover:scale-105"
             >
               <div className="flex items-center space-x-4">
                 <div className="text-4xl text-blue-600 animate-pulse">{item.icon}</div>
